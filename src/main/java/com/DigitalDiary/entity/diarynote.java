@@ -3,12 +3,20 @@ package com.DigitalDiary.entity;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "diarynote")
 public class diarynote {
 	
 	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+    private Long id;
+	
 	@Nonnull
 	@Column(name = "username")
 	private String username;
@@ -17,15 +25,12 @@ public class diarynote {
 	@Column(name = "date")
 	private String date;
 	
-	@Nonnull
 	@Column(name = "note")
 	private String note;
 	
-	@Nonnull
 	@Column(name = "image")
 	private String image;
 	
-	@Nonnull
 	@Column(name = "file")
 	private String file;
 
@@ -67,6 +72,12 @@ public class diarynote {
 
 	public void setFile(String file) {
 		this.file = file;
+	}
+
+	@Override
+	public String toString() {
+		return "diarynote [id=" + id + ", username=" + username + ", date=" + date + ", note=" + note + ", image="
+				+ image + ", file=" + file + "]";
 	}
 	
 	

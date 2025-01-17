@@ -1,24 +1,16 @@
 package com.DigitalDiary.models;
 
-public class NoteDetails {
-	
-	private String username;
+import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
+
+public class NoteResponse {
 	
 	private String date;
 	
 	private String note;
-	
+
 	private String image;
 	
 	private String file;
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
 
 	public String getDate() {
 		return date;
@@ -51,13 +43,6 @@ public class NoteDetails {
 	public void setFile(String file) {
 		this.file = file;
 	}
-
-	@Override
-	public String toString() {
-		return "NoteDetails [username=" + username + ", date=" + date + ", note=" + note + ", image=" + image
-				+ ", file=" + file + "]";
-	}
-	
 	
 	
 
