@@ -5,4 +5,4 @@ FROM openjdk:17-jdk-alpine
 EXPOSE 8080
 
 # Command to run the application
-ENTRYPOINT ["DigitalDiaryApplication.java", "-jar", "DigitalDiary-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["DigitalDiary-0.0.1-SNAPSHOT.jar"]
