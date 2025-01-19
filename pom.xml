@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.DigitalDiary</groupId>
 	<artifactId>DigitalDiary</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>DigitalDiary</name>
 	<description>This is project of Digital Diary Application using Spring Boot MVC</description>
 	<url/>
