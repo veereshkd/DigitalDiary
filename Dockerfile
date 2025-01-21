@@ -11,4 +11,4 @@ COPY ./target/DigitalDiary-1.0.0.jar DigitalDiary-1.0.0.jar
 EXPOSE 8080
 
 # Command to run the application
-ENTRYPOINT ["java", "-jar", "DigitalDiary-1.0.0.jar"]
+CMD ["java","-XX:+HeapDumpOnOutOfMemoryError","-XX:HeapDumpPath=config/","-jar","DigitalDiary-1.0.0.jar"]
