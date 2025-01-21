@@ -25,7 +25,7 @@ public class applicationuser implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
-	private Integer id;
+	private Long id;
 	
 	@Nonnull
 	@Column(name = "firstname")
@@ -72,12 +72,13 @@ public class applicationuser implements Serializable {
 		
 
 
-	public Integer getId() {
+
+	public Long getId() {
 		return id;
 	}
 
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

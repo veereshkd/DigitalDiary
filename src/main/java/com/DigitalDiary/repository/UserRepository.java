@@ -10,15 +10,14 @@ import com.DigitalDiary.entity.applicationuser;
 
 import jakarta.transaction.Transactional;
 
-@Repository
-public interface UserRepository extends JpaRepository<applicationuser, Integer> {
+@Transactional
+public interface UserRepository extends JpaRepository<applicationuser, Long> {
 
 	public applicationuser findByUsername(String username);
 
 	public applicationuser findByEmail(String email);
 		
 	@Modifying
-	@Transactional
 	@Query("UPDATE applicationuser au SET au.photoencode = :photoencode WHERE au.username = :username")
 	void setPhoto(@Param("photoencode") byte[] photoencode, @Param("username") String username);
 
