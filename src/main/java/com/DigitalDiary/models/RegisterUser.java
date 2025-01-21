@@ -22,7 +22,6 @@ public class RegisterUser {
 	@JsonProperty("password")
 	private String password;
 	
-	@NonNull
 	@JsonProperty("phone_number")
 	private long phone_number;
 	
