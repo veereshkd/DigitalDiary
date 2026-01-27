@@ -1,7 +1,7 @@
 # Use an official JDK runtime as a parent image
 FROM openjdk:17-jdk-alpine
 
-From tomcat:9.0.90-jdk17-corretto
+From tomcat:9.0.115-jdk17-corretto
 
 # Set the working directory inside the container
 WORKDIR /app
